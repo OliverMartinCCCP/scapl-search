@@ -90,7 +90,7 @@ google_ip_file = ''
 supported_search_engines = ['google', 'yandex', 'bing', 'yahoo', 'baidu', 'duckduckgo', 'ask']
 
 # The search engine(s) to use. For the supported search engines, see above "supported_search_engines"
-search_engines = ['google', ]
+search_engines = ['bing', ]
 
 # The base search urls
 # Ready to append the parameters at the end to fine tune the search.
@@ -245,7 +245,7 @@ All settings that only apply for requesting with real browsers.
 """
 
 # which browser to use in selenium mode. Valid values=  ('Chrome', 'Firefox', 'Phantomjs')
-sel_browser = 'Chrome'
+sel_browser = 'Firefox'
 
 # Manual captcha solving
 # If this parameter is set to a Integer, the browser waits for the user
