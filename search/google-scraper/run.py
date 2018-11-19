@@ -12,7 +12,7 @@ def run(self):
     config = {
         'use_own_ip': True,
         'keyword': self.param['keywords'],
-        'search_engines': ['google'],
+        'search_engines': ['bing'],
         'scrape_method': 'http',
         'do_caching': False,
         'log_level': self.verbose,
