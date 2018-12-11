@@ -5,7 +5,7 @@ import shlex
 from celery.task import task
 from celery.utils.log import get_task_logger
 from config.generic_task import GENERIC_TASK_CONFIG, GENERIC_TASK_LOG_LEVEL
-from subprocess import Popen, PIPE
+from subprocess import Popen, PIPE, list2cmdline
 
 logger = get_task_logger(__name__)
 
@@ -27,6 +27,6 @@ def generic(self, cmd):
         options.append('-' + 'v' * GENERIC_TASK_LOG_LEVEL)
     cmd = shlex.split(cmd)
     cmd.extend(options)
-    p = Popen(cmd, stdout=PIPE, stderr=PIPE)
+    p = Popen(list2cmdline(cmd), stdout=PIPE, stderr=PIPE)
     out, err = p.communicate()
     return {'output': out, 'error': err}
