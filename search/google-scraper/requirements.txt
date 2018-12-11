@@ -1,3 +1,4 @@
+cryptography
 lxml
 selenium
 cssselect
