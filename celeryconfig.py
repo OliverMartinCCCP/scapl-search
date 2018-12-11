@@ -16,11 +16,11 @@ scapl_exchange = Exchange('scapl', type='topic')
 CELERY_DEFAULT_QUEUE = 'default'
 CELERY_QUEUES = (
     Queue('default', default_exchange, routing_key='default'),
-    Queue('mq_se', scapl_exchange, routing_key='se.#'),
+    Queue('mq_se', scapl_exchange, routing_key='se.task'),
 )
 
 CELERY_IGNORE_RESULT = False
-BROKER_URL = 'amqp://guest:guest@localhost:5672/'
+BROKER_URL = 'amqp://guest:guest@192.168.10.10:5672/'
 #BROKER_URL = 'redis://localhost:6379/10'
 
 CELERY_DEFAULT_EXCHANGE = 'scapl'
